@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    color: #000;
+    background: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokeBox.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokeBox {
+    text-align: center;  
+}
+
+
+.content {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+
+.pokeBox .pesquisa input {
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.pokeBox .pesquisa button {
+    height: 22px;
+    border-radius: 5px;
+}
+
