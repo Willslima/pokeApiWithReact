@@ -14,9 +14,8 @@ body {
 }
 
 .pokeBox {
-    text-align: center;  
+    text-align: center;
 }
-
 
 .content {
     margin-top: 1em;
@@ -25,7 +24,6 @@ body {
     overflow: hidden;
     border-radius: 10px;
     justify-content: center;
-
 }
 
 .pokeBox .pesquisa input {
@@ -37,4 +35,3 @@ body {
     height: 22px;
     border-radius: 5px;
 }
-
