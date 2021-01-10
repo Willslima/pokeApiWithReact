@@ -9,18 +9,33 @@ class consumoApi extends Component {
     }
 
     async componentDidMount() {
-        const response = await api.get('charmander')
+        const response = await api.get('bulbasaur')
 
-        this.setState({ nome: response.data, habilidade: response.data.abilities })
+        this.setState({ 
+            nome: response.data, 
+            habilidade: response.data.abilities,
+            imagem: response.data.sprites.other.dream_world.front_default 
+        })
     }
 
     render() {
 
-        const { nome, habilidade } = this.state
+        const { nome, habilidade, imagem } = this.state
         return (
             <div>
+                <img src={imagem} alt="pokemon" />
                 {nome.name}
-                {console.log(habilidade[0])}
+                <div>
+                {habilidade.map(resp => 
+                    <ul>
+                        <li>
+                        {resp.ability.name}
+                        </li>
+                    </ul>
+                        
+                        )
+                    }
+                </div>
             </div>
         )
     }
