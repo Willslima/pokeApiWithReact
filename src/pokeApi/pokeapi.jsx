@@ -3,6 +3,7 @@ import './pokeapi.css'
 import React from 'react'
 import Card from './card'
 import Dados from './consumoApi'
+import Button from './Button'
 
 
 
@@ -11,13 +12,11 @@ const pokemon = props => {
     return (
         <div className='pokeBox'>
             <h1>PokeApi with React</h1>
-            <div className="pesquisa">
-                <input type="text" />
-                <button>Pesquisar</button>
-            </div>
+                <Button />
             <div className='content'>
 
-                <Card imagem='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png'
+                <Dados/>
+                {/* <Card imagem='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png'
                     nome='MEWTWO'
                     habilidade0='PRESSURE'
                     habilidade1='UNNERVE'
@@ -46,9 +45,8 @@ const pokemon = props => {
                     nome='SQUIRTLE'
                     habilidade0='TORRENT'
                     habilidade1='RAIN DISH'
-                    cor='#B6A3A3' />
+                    cor='#B6A3A3' /> */}
 
-                    <Dados/>
 
             </div>
         </div>

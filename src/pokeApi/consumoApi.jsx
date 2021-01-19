@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import api from './api'
+import Card from './card'
+import Button from './Button'
 
 class consumoApi extends Component {
 
@@ -9,7 +11,7 @@ class consumoApi extends Component {
     }
 
     async componentDidMount() {
-        const response = await api.get('bulbasaur')
+        const response = await api.get('spinda')
 
         this.setState({ 
             nome: response.data, 
@@ -23,19 +25,9 @@ class consumoApi extends Component {
         const { nome, habilidade, imagem } = this.state
         return (
             <div>
-                <img src={imagem} alt="pokemon" />
-                {nome.name}
-                <div>
-                {habilidade.map(resp => 
-                    <ul>
-                        <li>
-                        {resp.ability.name}
-                        </li>
-                    </ul>
-                        
-                        )
-                    }
-                </div>
+
+                <Card imagem={imagem} nome={nome.name} habilidade={habilidade.map((res,i) => <div className={`habilidade${i}`}>{res.ability.name}</div>)} />
+                {console.log(nome)}
             </div>
         )
     }

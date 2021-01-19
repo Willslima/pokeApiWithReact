@@ -17,10 +17,10 @@ const card =  props => {
 
             <div className="desc">
                 <div className="nome">{props.nome}</div>
-                <div className="habilidade">{props.habilidade0}</div>
-                <div className="habilidade">{props.habilidade1}</div>
-                <div className="habilidade">{props.habilidade2}</div>
-                <div className="habilidade">{props.habilidade3}</div>
+                <div className="habilidade0">{props.habilidade}</div>
+                <div className="habilidade1">{props.habilidade0}</div>
+                <div className="habilidade2">{props.habilidade1}</div>
+                <div className="habilidade3">{props.habilidade2}</div>
 
             </div>
         </div>
